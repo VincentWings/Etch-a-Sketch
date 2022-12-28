@@ -1,0 +1,91 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fcc739;
+}
+
+.canvasWrap {
+    position: relative;
+    margin: auto;
+    margin: 20px;
+}
+
+.canvasWrap h1 {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 46px;
+    font-family: cursive;
+    margin: 0;
+    color: #fff;
+}
+
+canvas {
+    display: block;
+    width: 1000px;
+    max-width: 100%;
+    height: 600px;
+    margin: 60px auto;
+    background: #d1d4d3;
+    border: 100px solid #b90000;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.buttons {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1000px;
+    margin: auto;
+    padding-left: 15px;
+}
+
+.btn-shake {
+    display: block;
+    width: 80px;
+    height: 80px;
+    font-size: 18px;
+    border-radius: 100px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+    border: 0;
+    color: #4e504f;
+}
+
+.btn-shake:hover {
+    color: #000;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.shake {
+    animation: shake 0.5s linear 1;
+}
+
+@keyframes shake {
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
